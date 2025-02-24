@@ -8,8 +8,7 @@ INSERT INTO "user" (
     "question",
     "answer",
     "pseudo",
-    "admin",
-    "created_at"
+    "admin"
 ) VALUES (
     'Admin',                
     'Admin',                 
@@ -18,8 +17,8 @@ INSERT INTO "user" (
     'Admin',     
     'Admin',      
     'admin',         
-    TRUE,                   
-    NOW()               
+    TRUE                   
+         
 );
 
 COMMIT;
