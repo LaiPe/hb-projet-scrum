@@ -1,2 +1,6 @@
 <?php
-ceci est test
+include "cloe.php";
+
+$test = generator_password();
+
+echo $test;
