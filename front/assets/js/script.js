@@ -1,15 +1,20 @@
-fetch('http://localhost:8000/api/clients', {
-    method: 'GET',
-})
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-})
+let url = 'http://localhost:3000/api/v1/users';
+let token = localStorage.getItem('token');
 
-let token = document.querySelector('token');
+fetch(url, {
+    "GET",
+    headers: {
+        "Authorization": `Bearer ${token}` 
+    }
+}).then(res => res.json().then(console.log)).catch(console.error); 
 
 if (token !== null) {
-    
+    fetch(url, {
+        method,
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }).then(res => res.json().then(console.log)).catch(console.error); 
 } else {
-    redirect('../../index.html');
+    window.location.href = '../../index.html';
 }
