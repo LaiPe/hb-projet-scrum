@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <script src="./assets/script.js"></script>
 </head>
+
 <body>
 
-<header id="header"></header>
-<script>
-    $("#header").load("./../components/header.html");
-</script>
+    <header id="header"></header>
+    <script>
+        $("#header").load("./../components/header.html");
+    </script>
 
-<form>
-    <label for="nom">Nom</label>
-    <input type="text" id="nom" name="nom">
-    <label for="prenom">Prenom</label>
-    <input type="text" id="prenom" name="prenom">
-    <label for="pseudo">pseudo</label>
-    <input type="text" id="pseudo" name="pseudo">
-    <label for="question">Question ?</label>
-    <input type="text" id="question" name="question">
-    <button type="submit">Inscription</button>
-</form>
+    <form>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom">
+        <label for="prenom">Prenom</label>
+        <input type="text" id="prenom" name="prenom">
+        <label for="pseudo">pseudo</label>
+        <input type="text" id="pseudo" name="pseudo">
+        <label for="question">Question ?</label>
+        <input type="text" id="question" name="question">
+        <button type="submit">Inscription</button>
+    </form>
 
-<footer id="footer"></footer>
-<script>
-    $("#footer").load("./../components/footer.html");
-</script>
+    <footer id="footer"></footer>
+    <script>
+        $("#footer").load("./../components/footer.html");
+    </script>
 
 </body>
+
 </html>
