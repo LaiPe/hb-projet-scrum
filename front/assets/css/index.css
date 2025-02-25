@@ -1,0 +1,7 @@
+.heart_svg:hover .heart {
+    fill:white;
+}
+
+.heart_svg:hover .lightning {
+    fill:#C42256;
+}

@@ -1,9 +1,3 @@
-fetch(url, {
-    method: 'GET',
-}).then(res => res.json()
-.then(console.log))
-.catch(console.error); 
-
 let text_hidden = document.querySelectorAll(".text_hidden");
 let button_mutuelle = document.querySelectorAll(".button_mutuelle");
 
