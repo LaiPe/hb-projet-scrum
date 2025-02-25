@@ -60,6 +60,7 @@
     },
     "extra": {
         "symfony": {
+            "disable_dotenv":true,
             "allow-contrib": false,
             "require": "6.4.*"
         }
