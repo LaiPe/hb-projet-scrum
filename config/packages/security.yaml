@@ -1,0 +1,14 @@
+security:
+    providers:
+        users_in_memory: { memory: null } # Exemple pour des utilisateurs en mémoire
+    firewalls:
+        main:
+            pattern: ^/
+            provider: users_in_memory
+            form_login:
+                login_path: app_login
+                check_path: app_login
+            logout:
+                path: app_logout
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }

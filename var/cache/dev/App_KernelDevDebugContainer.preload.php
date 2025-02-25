@@ -9,6 +9,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {
     return;
 }
 
+<<<<<<< HEAD
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
 (require __DIR__.'/App_KernelDevDebugContainer.php')->set(\ContainerJCQEPt4\App_KernelDevDebugContainer::class, null);
 require __DIR__.'/ContainerJCQEPt4/RequestPayloadValueResolverGhost3590451.php';
@@ -45,6 +46,42 @@ require __DIR__.'/ContainerJCQEPt4/getAdminPanelControllerService.php';
 require __DIR__.'/ContainerJCQEPt4/getAdminControllerService.php';
 require __DIR__.'/ContainerJCQEPt4/get_ServiceLocator_Y4Zrx_Service.php';
 require __DIR__.'/ContainerJCQEPt4/get_ServiceLocator_O2p6Lk7Service.php';
+=======
+require dirname(__DIR__, 3).'/vendor/autoload.php';
+(require __DIR__.'/App_KernelDevDebugContainer.php')->set(\Container2l8yOWs\App_KernelDevDebugContainer::class, null);
+require __DIR__.'/Container2l8yOWs/RequestPayloadValueResolverGhost3590451.php';
+require __DIR__.'/Container2l8yOWs/getTwig_Runtime_HttpkernelService.php';
+require __DIR__.'/Container2l8yOWs/getTwigService.php';
+require __DIR__.'/Container2l8yOWs/getSession_FactoryService.php';
+require __DIR__.'/Container2l8yOWs/getServicesResetterService.php';
+require __DIR__.'/Container2l8yOWs/getSecrets_VaultService.php';
+require __DIR__.'/Container2l8yOWs/getRouting_LoaderService.php';
+require __DIR__.'/Container2l8yOWs/getFragment_Renderer_InlineService.php';
+require __DIR__.'/Container2l8yOWs/getErrorControllerService.php';
+require __DIR__.'/Container2l8yOWs/getDebug_ErrorHandlerConfiguratorService.php';
+require __DIR__.'/Container2l8yOWs/getController_TemplateAttributeListenerService.php';
+require __DIR__.'/Container2l8yOWs/getContainer_GetRoutingConditionServiceService.php';
+require __DIR__.'/Container2l8yOWs/getContainer_EnvVarProcessorsLocatorService.php';
+require __DIR__.'/Container2l8yOWs/getContainer_EnvVarProcessorService.php';
+require __DIR__.'/Container2l8yOWs/getCache_SystemClearerService.php';
+require __DIR__.'/Container2l8yOWs/getCache_SystemService.php';
+require __DIR__.'/Container2l8yOWs/getCache_GlobalClearerService.php';
+require __DIR__.'/Container2l8yOWs/getCache_AppClearerService.php';
+require __DIR__.'/Container2l8yOWs/getCache_AppService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_VariadicService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_SessionService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_ServiceService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_RequestAttributeService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_RequestService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_QueryParameterValueResolverService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_DefaultService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_DatetimeService.php';
+require __DIR__.'/Container2l8yOWs/getArgumentResolver_BackedEnumResolverService.php';
+require __DIR__.'/Container2l8yOWs/getTemplateControllerService.php';
+require __DIR__.'/Container2l8yOWs/getRedirectControllerService.php';
+require __DIR__.'/Container2l8yOWs/getAdminControllerService.php';
+require __DIR__.'/Container2l8yOWs/get_ServiceLocator_Y4Zrx_Service.php';
+>>>>>>> 834d49ec65795e02f2621df9f8e5b2ee0f0dc850
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
