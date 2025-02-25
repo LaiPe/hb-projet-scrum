@@ -39,6 +39,7 @@ header nav a {
   color: white;
   text-decoration: none;
   padding: 0.7rem 1.2rem;
+  width: fit-content;
 }
 .bouton-func img {
   position: relative;
@@ -58,4 +59,25 @@ header nav a {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 350px;
+  background-color: var(--dark-color);
+  color: white;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+}
+form input {
+  margin-bottom: 1.5rem;
+}
+form button {
+  margin: 0 auto;
 }
