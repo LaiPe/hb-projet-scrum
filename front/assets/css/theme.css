@@ -47,3 +47,15 @@ header nav a {
   filter: grayscale(1);
   margin-left: 5px;
 }
+
+.titre-banniere {
+  color: white;
+  padding: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(../img/ai-generated-9227230_1280.jpg) lightgray 50% / cover no-repeat;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
