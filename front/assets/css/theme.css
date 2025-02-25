@@ -40,3 +40,10 @@ header nav a {
   text-decoration: none;
   padding: 0.7rem 1.2rem;
 }
+.bouton-func img {
+  position: relative;
+  top: 1px;
+  width: 15px;
+  filter: grayscale(1);
+  margin-left: 5px;
+}
