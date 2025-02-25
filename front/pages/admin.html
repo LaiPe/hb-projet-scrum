@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
-    <script src="./assets/script.js"></script>
+    <!-- <script src="./assets/script.js"></script> -->
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/pages/admin.css">
 </head>
+
 <body>
 
-<header id="header"></header>
-<script>
-    $("#header").load("./../components/header.html");
-</script>
+    <header id="header"></header>
+    <script>
+        $("#header").load("./../components/header.html");
+    </script>
 
-<h2>Nouvel Utilisateur</h2>
-<label>Pseudo</label>
-<input type="text" name="pseudo">
-<button type="submit">Créer</button>
+    <h2>Nouvel Utilisateur</h2>
+    <label>Pseudo</label>
+    <input type="text" name="pseudo">
+    <button type="submit">Créer</button>
 
-<footer id="footer"></footer>
-<script>
-    $("#footer").load("./../components/footer.html");
-</script>
+    <footer id="footer"></footer>
+    <script>
+        $("#footer").load("./../components/footer.html");
+    </script>
 
 </body>
+
 </html>
