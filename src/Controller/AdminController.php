@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class AdminController extends AbstractController
 {
+
     #[Route('/admin', name: 'app_admin')]
     public function index(): JsonResponse
     {
@@ -16,4 +17,15 @@ final class AdminController extends AbstractController
             'path' => 'src/Controller/AdminController.php',
         ]);
     }
+
+function generator_password(){
+    $i = 0;
+    $password = "";
+    
+    while($i < 10){
+        $i++;
+        $password = $password . rand(0,9);
+    }
+    return $password;
+}
 }
