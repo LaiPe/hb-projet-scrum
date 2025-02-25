@@ -43,3 +43,17 @@ if (token) {
 } else {
     window.location.href = '../../index.html';
 }
+
+/*recup du json du backend*/
+/*async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP : ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Erreur lors de la récupération du JSON :", error);
+    }
+}*/
