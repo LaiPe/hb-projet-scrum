@@ -12,20 +12,15 @@ final class AdminController extends AbstractController
     #[Route('/admin', name: 'app_admin')]
     public function index(): JsonResponse
     {
+
+        $new_passwword = $this->generator_password();
+
         return $this->json([
             'message' => 'Welcome to your new controller!',
             'path' => 'src/Controller/AdminController.php',
+            'passord' => $new_passwword,
         ]);
     }
 
-function generator_password(){
-    $i = 0;
-    $password = "";
-    
-    while($i < 10){
-        $i++;
-        $password = $password . rand(0,9);
-    }
-    return $password;
-}
+
 }

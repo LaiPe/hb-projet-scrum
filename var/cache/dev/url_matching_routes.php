@@ -9,6 +9,7 @@ return [
     false, // $matchHost
     [ // $staticRoutes
         '/admin' => [[['_route' => 'app_admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
+        '/admin/panel' => [[['_route' => 'app_admin_panel', '_controller' => 'App\\Controller\\AdminPanelController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
