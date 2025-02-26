@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- <script src="./assets/script.js"></script> -->
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/pages/inscription.css">
+</head>
+
+<body>
+
+    <header id="header"></header>
+    <script>
+        $("#header").load("./../components/header.html");
+    </script>
+
+    <h1 class="titre-banniere">Inscription</h1>
+
+    <form>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom">
+        <label for="prenom">Prenom</label>
+        <input type="text" id="prenom" name="prenom">
+        <label for="pseudo">pseudo</label>
+        <input type="text" id="pseudo" name="pseudo">
+        <label for="question">Question</label>
+        <select name="question" id="question">
+            <option value="" disabled selected>Choisissez votre question</option>
+            <option value="q1">Quelle est votre couleur préférée ?</option>
+            <option value="q2">Quel est le nom de votre premier animal de compagnie ?</option>
+            <option value="q3">Quel est le nom de votre ville natale ?</option>
+        </select>
+        <label for="reponse">Reponse</label>
+        <input type="text" id="reponse" name="reponse">
+        <button type="submit" class="bouton-func">Inscription</button>
+    </form>
+
+    <footer id="footer"></footer>
+    <script>
+        $("#footer").load("./../components/footer.html");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+:root {
+  --theme-color : #C42256;
+  --dark-color : #62112B;
+  --light-color : #F1C8D5;
+
+  --header-height : 160px;
+
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--light-color);
+}
+
+header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem;
+}
+header .logo img{
+  height: calc(var(--header-height)/1.5);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+header nav a {
+  color: black;
+}
+
+.bouton-func {
+  background-color: var(--theme-color);
+  border: 3px solid white;
+  border-radius: 2rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  width: fit-content;
+  font: inherit;
+}
+.bouton-func .heart_svg {
+  position: relative;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.bouton-func:hover {
+    background-color: white;
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+
+.bouton-func:hover .heart_svg .heart {
+    fill:var(--theme-color);
+}
+
+.bouton-func:hover .heart_svg .lightning {
+    fill: white;
+}
+
+.titre-banniere {
+  color: white;
+  padding: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(../img/ai-generated-9227230_1280.jpg) lightgray 50% / cover no-repeat;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 350px;
+  background-color: var(--dark-color);
+  color: white;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+}
+form input, form select {
+  margin-bottom: 1.5rem;
+}
+form button {
+  margin: 0 auto;
+}
