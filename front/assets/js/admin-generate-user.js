@@ -11,6 +11,11 @@ console.log(password_value);
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    username_create.innerHTML = `${ form.username.value }`;
-    password.innerHTML = `${ password_value }`;
+    username.innerHTML = "";
+    username_create.innerHTML = "";
+    
+    if (form.username.value != "") {
+        username_create.innerHTML = `${ form.username.value }`;
+        password.innerHTML = `${ password_value }`;
+    }
 });
