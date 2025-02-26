@@ -23,20 +23,30 @@ final class AdminPanelController extends AbstractController
             $newpassword = $this->generator_password();
         }
 
+        ## todo: ajouter test connexion BDD 
+        $usernameAdmin = "";
+        $usernameAdmin = $_GET['username'];
+
         return $this->json([
             'username' => $username,
             'password' => $newpassword,
+            'test bdd request' => $usernameAdmin,
         ]);
     }
 
     function generator_password(){
         $i = 0;
         $password = "";
-    
+
         while($i < 10){
             $i++;
             $password = $password . rand(0,9);
         }
         return $password;
+    }
+
+    function request_BDD(){
+        $sql = 
+        $result = $sql->execute();
     }
 }
