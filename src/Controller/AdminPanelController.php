@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,7 +12,7 @@ use Symfony\Component\Routing\Attribute\Route;
 final class AdminPanelController extends AbstractController
 {
     #[Route('/admin/panel', name: 'app_admin_panel')]
-    public function index(): JsonResponse
+    public function index(EntityManagerInterface $entityManager): JsonResponse
     {
         $newpassword = "";
         $username = "";
@@ -23,10 +25,12 @@ final class AdminPanelController extends AbstractController
             $newpassword = $this->generator_password();
         }
 
-        ## todo: ajouter test connexion BDD 
-        $usernameAdmin = "";
-        $usernameAdmin = $_GET['username'];
-
+        $usernameAdmin = $this->request_BDD($entityManager);
+        if ($usernameAdmin) {
+            $usernameAdmin = $usernameAdmin->getpseudo();
+        } else {
+            $usernameAdmin = 'No admin found';
+        }
         return $this->json([
             'username' => $username,
             'password' => $newpassword,
@@ -45,8 +49,9 @@ final class AdminPanelController extends AbstractController
         return $password;
     }
 
-    function request_BDD(){
-        $sql = 
-        $result = $sql->execute();
+    function request_BDD(EntityManagerInterface $entityManager){
+        $entityManager->getConnection()->connect();
+        $test = $entityManager->getRepository(User::class)->findOneBy(['pseudo' => 'admin']);
+        return $test;
     }
 }

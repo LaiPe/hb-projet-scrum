@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -44,6 +46,24 @@ class User
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $updated_at = null;
+
+    /**
+     * @var Collection<int, Comment>
+     */
+    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'user_id', orphanRemoval: true)]
+    private Collection $getComments;
+
+    /**
+     * @var Collection<int, UserLikeCollaborator>
+     */
+    #[ORM\OneToMany(targetEntity: UserLikeCollaborator::class, mappedBy: 'user_id', orphanRemoval: true)]
+    private Collection $getLikes;
+
+    public function __construct()
+    {
+        $this->getComments = new ArrayCollection();
+        $this->getLikes = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -166,6 +186,66 @@ class User
     public function setUpdatedAt(?\DateTimeInterface $updated_at): static
     {
         $this->updated_at = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Comment>
+     */
+    public function getGetComments(): Collection
+    {
+        return $this->getComments;
+    }
+
+    public function addGetComment(Comment $getComment): static
+    {
+        if (!$this->getComments->contains($getComment)) {
+            $this->getComments->add($getComment);
+            $getComment->setUserId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGetComment(Comment $getComment): static
+    {
+        if ($this->getComments->removeElement($getComment)) {
+            // set the owning side to null (unless already changed)
+            if ($getComment->getUserId() === $this) {
+                $getComment->setUserId(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, UserLikeCollaborator>
+     */
+    public function getGetLikes(): Collection
+    {
+        return $this->getLikes;
+    }
+
+    public function addGetLike(UserLikeCollaborator $getLike): static
+    {
+        if (!$this->getLikes->contains($getLike)) {
+            $this->getLikes->add($getLike);
+            $getLike->setUserId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGetLike(UserLikeCollaborator $getLike): static
+    {
+        if ($this->getLikes->removeElement($getLike)) {
+            // set the owning side to null (unless already changed)
+            if ($getLike->getUserId() === $this) {
+                $getLike->setUserId(null);
+            }
+        }
 
         return $this;
     }
