@@ -42,12 +42,26 @@ header nav a {
   width: fit-content;
   font: inherit;
 }
-.bouton-func img {
+.bouton-func .heart_svg {
   position: relative;
   top: 1px;
   width: 15px;
-  filter: grayscale(1);
+  height: 15px;
   margin-left: 5px;
+}
+
+.bouton-func:hover {
+    background-color: white;
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+
+.bouton-func:hover .heart_svg .heart {
+    fill:var(--theme-color);
+}
+
+.bouton-func:hover .heart_svg .lightning {
+    fill: white;
 }
 
 .titre-banniere {
