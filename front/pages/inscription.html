@@ -27,8 +27,15 @@
         <input type="text" id="prenom" name="prenom">
         <label for="pseudo">pseudo</label>
         <input type="text" id="pseudo" name="pseudo">
-        <label for="question">Question ?</label>
-        <input type="text" id="question" name="question">
+        <label for="question">Question</label>
+        <select name="question" id="question">
+            <option value="" disabled selected>Choisissez votre question</option>
+            <option value="q1">Quelle est votre couleur préférée ?</option>
+            <option value="q2">Quel est le nom de votre premier animal de compagnie ?</option>
+            <option value="q3">Quel est le nom de votre ville natale ?</option>
+        </select>
+        <label for="reponse">Reponse</label>
+        <input type="text" id="reponse" name="reponse">
         <button type="submit" class="bouton-func">Inscription</button>
     </form>
 
