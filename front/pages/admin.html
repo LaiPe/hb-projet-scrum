@@ -22,12 +22,13 @@
 
     <h2 class="titre-banniere">Nouvel Utilisateur</h2>
 
-    <form id="form" action="">
+    <form id="form" action="127.0.0.1:8000/admin/panel">
         <label for="username">Nom d'utilisateur</label>
         <input type="text" name="username" id="username">
         <div id="generate">
             <p id="username_create"></p>
             <p id="password"></p>
+            <p id="error"></p>
         </div>
         <button type="submit" class="bouton-func">Créer</button>
     </form>
@@ -39,7 +40,7 @@
         $("#footer").load("./../components/footer.html");
     </script>
 
-    <script src="../assets/js/admin-generate-user.js"></script>
+    <script src="/front/assets/js/admin-generate-user.js"></script>
 
 </body>
 
