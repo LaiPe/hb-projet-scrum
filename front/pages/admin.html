@@ -21,14 +21,24 @@
     </script>
 
     <h2>Nouvel Utilisateur</h2>
-    <label>Nom d'utilisateur</label>
-    <input type="text" name="pseudo">
-    <button type="submit" class="bouton-func">Créer</button>
+    <form id="form" action="">
+        <label to="username">Nom d'utilisateur</label>
+        <input type="text" name="username" id="username">
+        <div id="generate">
+            <p id="username_create"></p>
+            <p id="password"></p>
+        </div>
+        <button type="submit" class="bouton-func">Créer</button>        
+    </form>
+
+
 
     <footer id="footer"></footer>
     <script>
         $("#footer").load("./../components/footer.html");
     </script>
+
+    <script src="../assets/js/admin-generate-user.js"></script>
 
 </body>
 
