@@ -42,7 +42,7 @@ CREATE TABLE "user_like_collaborator" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "user_id" INT NOT NULL REFERENCES "user"("id") ON DELETE CASCADE,
     "collaborator_id"INT NOT NULL REFERENCES "collaborator"("id") ON DELETE CASCADE,
-    "created_at" TIMESTAMPTZ NOT NULL default(now())?
+    "created_at" TIMESTAMPTZ NOT NULL default(now()),
     UNIQUE ("user_id", "collaborator_id")
 );
 COMMIT;
